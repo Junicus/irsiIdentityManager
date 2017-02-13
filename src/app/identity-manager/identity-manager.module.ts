@@ -1,20 +1,28 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { UsersListComponent } from './users/users-list.component';
 import { RolesListComponent } from './roles/roles-list.component';
+import { HomeComponent } from './home/home.component';
+
+import { routing } from '../app.routes';
 
 @NgModule({
-  imports: [
-    FormsModule,
-    HttpModule
-  ],
-  exports: [
+  declarations: [
+    HomeComponent,
     UsersListComponent,
     RolesListComponent
   ],
-  declarations: [
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    routing
+  ],
+  exports: [
+    HomeComponent,
     UsersListComponent,
     RolesListComponent
   ],

@@ -1,0 +1,11 @@
+<h3>Home</h3>
+<nav>
+  <div *ngFor="let item of menuItems">
+    <div>{{item.name}}</div>
+    <div>
+      <a [routerLink]="[item.path]">
+        <i [class]="[item.image]"></i>
+      </a>
+    </div>
+  </div>
+</nav>
